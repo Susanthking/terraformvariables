@@ -109,6 +109,7 @@ resource "aws_instance" "public_a" {
   ami           = var.ami
   instance_type = var.instance_type
   subnet_id     = aws_subnet.public_a.id
+  associate_public_ip_address = true
   tags          = var.tags
 }
 
@@ -116,6 +117,7 @@ resource "aws_instance" "public_b" {
   ami           = var.ami
   instance_type = var.instance_type
   subnet_id     = aws_subnet.public_b.id
+  associate_public_ip_address = true
   tags          = var.tags
 }
 
